@@ -24,9 +24,7 @@
             color: #FFFFFF;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        
 
         .header {
             background: linear-gradient(135deg, #0B1D35 0%, #1A3A5C 100%);
@@ -53,9 +51,8 @@
             margin-top: 10px;
         }
 
-        /* =========================
-           CONTENEDOR
-        ========================= */
+     
+        
 
         .container {
             width: 100%;
@@ -64,9 +61,7 @@
             padding: 20px;
         }
 
-        /* =========================
-           KPI CARDS
-        ========================= */
+     
 
         .kpi-row {
             display: grid;
@@ -105,10 +100,7 @@
             font-weight: 600;
         }
 
-        /* =========================
-           FILAS DE GRÁFICOS
-        ========================= */
-
+       
         .chart-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -142,9 +134,7 @@
             height: 320px;
         }
 
-        /* =========================
-           INFO CARDS
-        ========================= */
+       
 
         .info-card {
             background: #112840;
@@ -200,9 +190,7 @@
             line-height: 1.5;
         }
 
-        /* =========================
-           TRANSFORMACIÓN
-        ========================= */
+        
 
         .transform-item {
             display: flex;
@@ -233,9 +221,7 @@
             min-width: 20px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+   
 
         .footer {
             text-align: center;
@@ -247,9 +233,6 @@
             margin-top: 20px;
         }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
 
         @media (max-width: 1100px) {
 
@@ -289,9 +272,7 @@
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+
 
 <div class="header">
 
@@ -304,16 +285,11 @@
 </div>
 
 
-<!-- =========================
-     CONTENEDOR PRINCIPAL
-========================= -->
 
 <div class="container">
 
 
-    <!-- =========================
-         KPI CARDS
-    ========================= -->
+   
 
     <div class="kpi-row">
 
@@ -330,6 +306,7 @@
             <div class="label">Empresas EC activas (2024)</div>
             <div class="sub">
                 <span>+81%</span> desde 2019 (de 37 a 67)
+                <span>-17,9%</span> caida en 2025 (55 empresas)
             </div>
         </div>
 
@@ -337,6 +314,7 @@
             <div class="number">2.915</div>
             <div class="label">Contribuyentes 2025</div>
             <div class="sub">
+                <span>0,87%</span> crecimiento acumulado en el periodo
                 <span>71,2%</span> opera en múltiples provincias
             </div>
         </div>
@@ -352,10 +330,7 @@
     </div>
 
 
-    <!-- =========================
-         ROW 1
-         COMPOSICIÓN + TRANSFORMACIÓN
-    ========================= -->
+  
 
     <div class="chart-row">
 
@@ -366,6 +341,14 @@
             </h3>
 
             <div id="chart-donut" class="chart-container"></div>
+            <div class="highlight-box" style="margin-top:20px;">
+
+                    <div class="positive">
+                         Las actividades de Informática n.c.p. y Consultores en Informática y sumministros de programas informáticos concentran el 77,1% del ingreso total del sector.
+                    </div>
+
+                </div>
+
 
         </div>
 
@@ -373,7 +356,7 @@
         <div class="chart-box">
 
             <h3>
-                Participación de Ingresos EC por actividad 2022 → 2025
+                Participación de Ingresos EC por actividad 2022 - 2025
             </h3>
 
             <div style="padding: 10px;">
@@ -453,7 +436,7 @@
                 <div class="highlight-box" style="margin-top:20px;">
 
                     <div class="positive">
-                        ✦ Los servicios informáticos desplazaron a la publicidad
+                         Los servicios informáticos desplazaron a la publicidad
                         como motor del sector. La EC de La Rioja se especializa
                         en actividades de mayor valor agregado.
                     </div>
@@ -474,10 +457,7 @@
     </div>
 
 
-    <!-- =========================
-         ROW 2
-         INGRESOS + SALARIOS
-    ========================= -->
+   
 
     <div class="chart-row">
 
@@ -485,7 +465,7 @@
 
             <h3>
                 Ingresos reales del sector EC
-                ($ millones, base dic-2022)
+                ($ millones, base=2022)
             </h3>
 
             <div id="chart-ingresos" class="chart-container"></div>
@@ -506,7 +486,7 @@
         <div class="chart-box">
 
             <h3>
-                Remuneración por rama EC vs. promedio provincial (dic-2025)
+                Remuneración promedio por rama EC vs. promedio provincial (dic-2025)
             </h3>
 
             <div id="chart-salarios" class="chart-container"></div>
@@ -514,11 +494,10 @@
             <div class="highlight-box">
 
                 <div class="positive">
-                    En diciembre de 2025, las ramas de Telecomunicaciones
-                    ($4.230.092), Informática n.c.p. ($4.220.278) y
-                    Consultores en Informática ($2.786.240) superaron
+                    En diciembre de 2025, las ramas de Informática n.c.p. ($3.108.543), telecomunicaciones ($2.764.135) y
+                    Consultores en Informática ($1.726.147) superaron
                     ampliamente la remuneración promedio general de la
-                    provincia, duplicando y triplicando la referencia local.
+                    provincia, duplicando la referencia local.
                 </div>
 
             </div>
@@ -528,10 +507,7 @@
     </div>
 
 
-    <!-- =========================
-         ROW 3
-         EMPRESAS + CONTRIBUYENTES
-    ========================= -->
+    
 
     <div class="chart-row">
 
@@ -542,6 +518,15 @@
             </h3>
 
             <div id="chart-empresas" class="chart-container"></div>
+             <div
+                class="highlight-box"
+                style="margin-top:20px;">
+
+                <div class="positive">
+                    El total de empresas vinculadas a la Economia del conocimiento se incrementó de 37 a 67 entre 2019 y 2024, lo que representa un crecimiento del 81%. Sin embargo, en 2025 se observó una caída del -17,9% respecto al año anterior, con un total de 55 empresas.
+                </div>
+
+            </div>
 
         </div>
 
@@ -569,10 +554,6 @@
     </div>
 
 
-    <!-- =========================
-         ROW 4
-         I+D + EXPORTACIONES + CONECTIVIDAD
-    ========================= -->
 
     <div class="chart-row-3">
 
@@ -632,7 +613,6 @@
         </div>
 
 
-        <!-- EXPORTACIONES -->
 
         <div class="info-card">
 
@@ -678,7 +658,7 @@
         </div>
 
 
-        <!-- CONECTIVIDAD -->
+        
 
         <div class="info-card">
 
@@ -729,16 +709,11 @@
     </div>
 
 
-    <!-- =========================
-         ROW 5
-         EMPLEO
-    ========================= -->
+  
 
     <div class="chart-row">
 
-        <!-- =========================
-             EMPLEO REGISTRADO
-        ========================= -->
+      
 
         <div class="chart-box">
 
@@ -766,9 +741,7 @@
         </div>
 
 
-        <!-- =========================
-             EMPLEO POR SECTOR
-        ========================= -->
+     
 
         <div class="info-card">
 
@@ -854,28 +827,22 @@
 </div>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+
 
 <div class="footer">
 
-    Fuentes: DGR La Rioja (IIBB), OEDE-MTEySS (SIPA),
+    Fuentes: DGIP La Rioja (IIBB), OEDE-MTEySS (SIPA),
     MINCyT, INDEC, ENACOM · Datos actualizados al Q1-2026
     según disponibilidad de cada fuente
 
 </div>
 
 
-<!-- =========================
-     JAVASCRIPT / HIGHCHARTS
-========================= -->
+
 
 <script>
 
-    /* =========================
-       CONFIGURACIÓN GENERAL
-    ========================= */
+   
 
     Highcharts.setOptions({
 
@@ -956,9 +923,7 @@
     });
 
 
-    /* =========================
-       1. DONUT
-    ========================= */
+    
 
     Highcharts.chart("chart-donut", {
 
@@ -1052,9 +1017,7 @@
     });
 
 
-    /* =========================
-       2. INGRESOS REALES
-    ========================= */
+    
 
     Highcharts.chart("chart-ingresos", {
 
@@ -1147,9 +1110,7 @@
     });
 
 
-    /* =========================
-       3. SALARIOS
-    ========================= */
+   
 
     Highcharts.chart("chart-salarios", {
 
@@ -1165,15 +1126,15 @@
 
             categories: [
 
-                "Telecomunicaciones",
-
                 "Informática n.c.p.",
+                
+                "Telecomunicaciones",
 
                 "Consultores inform.",
 
                 "Publicidad",
 
-                "Radio y TV",
+                "Contenidos audiovisuales",
 
                 "Farmacéutica"
 
@@ -1250,17 +1211,17 @@
 
             data: [
 
-                4230092,
+                3108543,
 
-                4220278,
+                2764135,
 
-                2786240,
+                1726147,
 
-                1496456,
+                885187,
 
-                1034009,
+                683117,
 
-                975976
+                679922
 
             ],
 
@@ -1271,10 +1232,7 @@
     });
 
 
-    /* =========================
-       4. EMPRESAS EC
-    ========================= */
-
+   
     Highcharts.chart("chart-empresas", {
 
         chart: {
@@ -1439,12 +1397,13 @@
 
         ]
 
+        
+
     });
+    
 
 
-    /* =========================
-       5. CONTRIBUYENTES
-    ========================= */
+    
 
     Highcharts.chart("chart-contribuyentes", {
 
@@ -1554,9 +1513,7 @@
     });
 
 
-    /* =========================
-       6. EMPLEO
-    ========================= */
+   
 
     Highcharts.chart("chart-empleo", {
 
@@ -1677,9 +1634,7 @@
     });
 
 
-    /* =========================
-       7. TRANSFORMACIÓN
-    ========================= */
+   
 
     Highcharts.chart("chart-transform", {
 
