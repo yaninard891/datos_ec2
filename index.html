@@ -760,9 +760,7 @@
     });
 
 
-    // ==========================================================
-    // SALARIOS POR CIIU EC — PROMEDIO 2025
-    // ==========================================================
+ 
     Highcharts.chart("chart-salarios", {
 
         chart: { type: "bar" },
@@ -840,84 +838,77 @@
 
 
 
-    Highcharts.chart("chart-prima", {
+   Highcharts.chart("chart-prima", {
 
-        chart: { type: "column" },
-        title: { text: "" },
-        xAxis: {
-            categories: ["2022", "2023", "2024", "2025"],
-            labels: { style: { color: "#8EAFC4" } }
+    colors: ["#4ECDC4", "#8EAFC4"],
+
+    chart: { type: "column" },
+    title: { text: "" },
+    xAxis: {
+        categories: ["2022", "2023", "2024", "2025"],
+        labels: { style: { color: "#8EAFC4" } }
+    },
+    yAxis: {
+        title: {
+            text: "Prima salarial EC (% vs. provincial)",
+            style: { color: "#8EAFC4" }
         },
-        yAxis: {
-            title: {
-                text: "Prima salarial EC (% vs. provincial)",
-                style: { color: "#8EAFC4" }
-            },
-            labels: {
-                style: { color: "#8EAFC4" },
-                format: "{value:+.0f}%"
-            },
-            plotLines: [{
-                value: 0,
-                color: "#8EAFC4",
-                width: 1.5,
-                dashStyle: "Dash",
-                label: {
-                    text: "0%",
-                    style: { color: "#8EAFC4", fontSize: "10px" }
-                }
-            }]
+        labels: {
+            style: { color: "#8EAFC4" },
+            format: "{value:+.0f}%"
         },
-        legend: {
-            enabled: true,
-            align: "center",
-            verticalAlign: "top",
-            itemStyle: { color: "#8EAFC4" },
-            itemHoverStyle: { color: "#FFFFFF" }
-        },
-        tooltip: {
-            shared: true,
-            valueSuffix: "%",
-            pointFormat: '<span style="color:{point.color}">●</span> {series.name}: <b>{point.y:+.2f}%</b><br/>'
-        },
-        plotOptions: {
-            column: {
-                borderRadius: 4,
-                groupPadding: 0.15,
-                dataLabels: {
-                    enabled: true,
-                    format: "{point.y:+.1f}%",
-                    style: {
-                        color: "#FFFFFF",
-                        textOutline: "none",
-                        fontWeight: "bold",
-                        fontSize: "10px"
-                    }
+        plotLines: [{
+            value: 0,
+            color: "#8EAFC4",
+            width: 1.5,
+            dashStyle: "Dash",
+            label: {
+                text: "0%",
+                style: { color: "#8EAFC4", fontSize: "10px" }
+            }
+        }]
+    },
+    legend: {
+        enabled: true,
+        align: "center",
+        verticalAlign: "top",
+        itemStyle: { color: "#8EAFC4" },
+        itemHoverStyle: { color: "#FFFFFF" }
+    },
+    tooltip: {
+        shared: true,
+        valueSuffix: "%",
+        pointFormat: '<span style="color:{point.color}">●</span> {series.name}: <b>{point.y:+.2f}%</b><br/>'
+    },
+    plotOptions: {
+        column: {
+            borderRadius: 4,
+            groupPadding: 0.15,
+            dataLabels: {
+                enabled: true,
+                format: "{point.y:+.1f}%",
+                style: {
+                    color: "#FFFFFF",
+                    textOutline: "none",
+                    fontWeight: "bold",
+                    fontSize: "10px"
                 }
             }
+        }
+    },
+    series: [
+        {
+            name: "Núcleo software",
+            color: "#4ECDC4",
+            data: [53.67, 20.04, 45.75, 29.00]
         },
-        series: [
-            {
-                name: "Núcleo software",
-                data: [
-                    { y: 53.67, color: "#4ECDC4" },
-                    { y: 20.04, color: "#4ECDC4" },
-                    { y: 45.75, color: "#4ECDC4" },
-                    { y: 29.00, color: "#4ECDC4" }
-                ]
-            },
-            {
-                name: "AFIP-DGIP completo",
-                data: [
-                    { y: -2.41, color: "#6CB4D9" },
-                    { y: -6.59, color: "#6CB4D9" },
-                    { y: 21.38, color: "#6CB4D9" },
-                    { y: 8.36, color: "#6CB4D9" }
-                ]
-            }
-        ]
-    });
-
+        {
+            name: "AFIP-DGIP completo",
+            color: "#8EAFC4",
+            data: [-2.41, -6.59, 21.38, 8.36]
+        }
+    ]
+});
 
     
     Highcharts.chart("chart-empresas", {
