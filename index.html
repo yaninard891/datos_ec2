@@ -180,7 +180,6 @@
 
 <div class="container">
 
-    <!-- ============ KPI ============ -->
     <div class="kpi-row">
         <div class="kpi-card">
             <div class="number">$40.925 M</div>
@@ -188,13 +187,13 @@
             <div class="sub"><span>+132,9%</span> crecimiento real acumulado vs. 2022</div>
             <div class="kpi-source">Fuente: DGIP La Rioja (IIBB)</div>
         </div>
-        <div class="kpi-card">
-            <div class="number">102</div>
-            <div class="label">Empresas EC activas (2024)</div>
-            <div class="sub"><span>3,13%</span> del total provincial (3.255 empresas)<br>
-                <span class="neg">−17,6%</span> en 2025 (84 empresas)</div>
-            <div class="kpi-source">Fuente: SIPA-OEDE · Def. AFIP-DGIP</div>
-        </div>
+       <div class="kpi-card">
+    <div class="number">102</div>
+    <div class="label">Empresas EC activas (2024)</div>
+    <div class="sub"><span>3,40%</span> del total provincial (3.004 empresas)<br>
+        <span class="neg">−17,6%</span> en 2025 (84 empresas, 3,11%)</div>
+    <div class="kpi-source">Fuente: SIPA-OEDE · Def. AFIP-DGIP</div>
+</div>
         <div class="kpi-card">
             <div class="number">521</div>
             <div class="label">Empleo EC promedio 2025</div>
@@ -209,7 +208,7 @@
         </div>
     </div>
 
-    <!-- ============ ESTRUCTURA EC ============ -->
+   
     <div class="chart-row">
 
         <div class="chart-box">
@@ -281,7 +280,6 @@
 
     </div>
 
-    <!-- ============ INGRESOS Y SALARIOS ============ -->
     <div class="chart-row">
 
         <div class="chart-box">
@@ -298,8 +296,75 @@
         </div>
 
         <div class="chart-box">
+            <h3>Contribuyentes por régimen de tributación (2022-2025)</h3>
+            <div id="chart-contribuyentes" class="chart-container"></div>
+            <div class="highlight-box">
+                <div class="positive">
+                    Las firmas inscriptas bajo el régimen de Convenio
+                    Multilateral crecieron de 1.752 a 2.075 en el período,
+                    elevando su participación en el padrón del 60,6% al 71,2%.
+                </div>
+            </div>
+            <div class="chart-source">Fuente: DGIP La Rioja (IIBB), 2022-2025</div>
+        </div>
+
+    </div>
+
+   
+    <div class="chart-row">
+
+        <div class="chart-box">
+            <h3>Empresas EC por bloque — Definición AFIP-DGIPs (2019-2025)</h3>
+            <div id="chart-empresas" class="chart-container-tall"></div>
+            <div class="highlight-box" style="margin-top:20px;">
+                <div class="positive">
+                    El total de empresas EC pasó de 70 (2019) a 102 (2024),
+                    un crecimiento de <strong>+45,7%</strong>. En 2025 se
+                    observa una caída del <strong>−17,6%</strong>, con 84
+                    empresas. El bloque de software y servicios informáticos creció <strong>367%</strong>entre 2019 y 2024, pasando de 6 a 28 empresas.
+                </div>
+                <div class="nota">
+                    <strong>Definición AFIP-DGIP:</strong> actividades que
+                    generan el impuesto DGIP tecnológico, mapeadas a CIIU
+                    Rev. 3 a 4 dígitos: 7210, 7220, 7250, 7290, 7300, 7421,
+                    7430, 7499. Los bloques <em>Ingeniería y geología</em>
+                    (7421) y <em>Servicios profesionales</em> (7499) son
+                    proxies: el SIPA no permite aislar la actividad EC
+                    específica. El bloque de <em>Software y Servicios Informáticos</em> incluye 3 códigos CIIU: consultores en informática (7220), mantenimiento y reparación (7250) y actividades de informática n.c.p. (7290).
+                </div>
+            </div>
+            <div class="chart-source">
+                Fuente: SIPA-OEDE (STEySS), <em>provinciales_serie_empresas3_2</em>.
+                Definición: AFIP-DGIP.
+            </div>
+        </div>
+
+        <div class="chart-box">
+            <h3>Intensidad empresarial EC — Empresas EC por 1.000 empresas totales (2024)</h3>
+            <div id="chart-intensidad" class="chart-container-tall"></div>
+            <div class="highlight-box" style="margin-top:20px;">
+                <div class="positive">
+                    La Rioja registra una densidad de <strong>31,3‰</strong>,
+                    por encima de Santa Fe (27,3‰) y Santiago del Estero
+                    (25,6‰). En <strong>términos relativos al
+                    tamaño de su economía ocupa el 7° lugar</strong>. Con solo 3.004 empresas totales en la provincia, La Rioja logra 102 empresas EC. Eso significa que una de cada 30 empresas de la provincia pertenece al sector de la Economía del Conocimiento.
+                </div>
+              
+            </div>
+            <div class="chart-source">
+                Fuente: SIPA-OEDE (STEySS), <em>provinciales_serie_empresas3_2</em>.
+                Definición: AFIP-DGIP. Intensidad = (empresas EC / empresas totales) × 1.000.
+            </div>
+        </div>
+
+    </div>
+
+   
+    <div class="chart-row">
+
+        <div class="chart-box">
             <h3>Remuneración promedio CIIU EC vs. promedio provincial (promedio 2025)</h3>
-            <div id="chart-salarios" class="chart-container"></div>
+            <div id="chart-salarios" class="chart-container-tall"></div>
             <div class="highlight-box">
                 <div class="positive">
                     Un trabajador de <strong>Informática n.c.p.</strong> gana
@@ -326,19 +391,44 @@
             </div>
         </div>
 
+        <div class="chart-box">
+            <h3>Empleo EC y participación en el empleo total provincial (2019-2025)</h3>
+            <div id="chart-empleo-share" class="chart-container-tall"></div>
+            <div class="highlight-box" style="margin-top:20px;">
+                <div class="positive">
+                    El empleo EC pasó de <strong>356</strong> puestos (2019)
+                    a <strong>521</strong> (2025), un crecimiento de
+                    <strong>+46,4%</strong>. Su participación en el empleo
+                    formal provincial subió de <strong>1,32%</strong> a
+                    <strong>1,93%</strong>. 
+                </div>
+                <div class="nota">
+                    Entre 2022 y 2024 (último año con datos completos de
+                    empresas), la elasticidad del sector fue de
+                    <strong>1,85</strong>: por cada 1% que crecen las
+                    empresas EC, el empleo crece 1,85%. Es un sector
+                    <strong>intensivo en empleo calificado</strong>. (Dato provisorio, falta datos)
+                </div>
+            </div>
+            <div class="chart-source">
+                Fuente: SIPA-OEDE (STEySS). Definición: AFIP-DGIP.
+                Promedio anual de trimestres con dato.
+            </div>
+        </div>
+
     </div>
 
-    <!-- ============ PRIMA SALARIAL + RESUMEN ============ -->
+   
     <div class="chart-row">
 
         <div class="chart-box">
             <h3>Prima salarial EC — Núcleo software vs. AFIP-DGIP (2022-2025)</h3>
-            <div id="chart-prima" class="chart-container"></div>
+            <div id="chart-prima" class="chart-container-tall"></div>
             <div class="highlight-box" style="margin-top:20px;">
                 <div class="positive">
                     El <strong>núcleo software</strong> paga entre
                     <strong>+20%</strong> y <strong>+54%</strong> más que el
-                    promedio provincial en todo el período.
+                    promedio provincial en todo el período. La prima del núcleo software bajó de +45,75% a +29,00% en 2025. Pero el valor actual está en línea con el promedio histórico: el diferencial del sector informático sigue siendo fuerte.
                 </div>
             </div>
             <div class="chart-source">
@@ -390,111 +480,104 @@
 
     </div>
 
-    <!-- ============ EMPRESAS EC — DEFINICIÓN AFIP-DGIP ============ -->
+    
     <div class="chart-row">
 
         <div class="chart-box">
-            <h3>Empresas EC por bloque — Definición AFIP-DGIP (2019-2025)</h3>
-            <div id="chart-empresas" class="chart-container"></div>
+            <h3>Empleo privado formal — Evolución y variación interanual (2022-2026)</h3>
+
+            <div id="chart-empleo-tendencia"
+                 style="width:100%; height:210px;"></div>
+
+            <div id="chart-empleo-ia"
+                 style="width:100%; height:170px; margin-top:8px;"></div>
+
             <div class="highlight-box" style="margin-top:20px;">
                 <div class="positive">
-                    El total de empresas EC pasó de 70 (2019) a 102 (2024),
-                    un crecimiento de <strong>+45,7%</strong>. En 2025 se
-                    observa una caída del <strong>−17,6%</strong>, con 84
-                    empresas (dato preliminar).
+                    El gráfico muestra tres fases: <strong>auge</strong> 2022-2023, <strong>derrumbe</strong> 2024 Y <strong>meseta</strong> 2025-2026. El pico fue mayo 2023 con 34.329 puestos. En junio 2026 esta en 28.890 puestos: −15,8% menos.
+                    En <strong>mayo 2026</strong> el stock fue de
+                    <strong>30.305 puestos</strong>, con una variación
+                    interanual de <strong>−1,7%</strong>.
                 </div>
                 <div class="nota">
-                    <strong>Definición AFIP-DGIP:</strong> actividades que
-                    generan el impuesto DGIP tecnológico, mapeadas a CIIU
-                    Rev. 3 a 4 dígitos: 7210, 7220, 7250, 7290, 7300, 7421,
-                    7430, 7499. Los bloques <em>Ingeniería y geología</em>
-                    (7421) y <em>Servicios profesionales</em> (7499) son
-                    proxies: el SIPA no permite aislar la actividad EC
-                    específica. El conteo es un <strong>techo superior</strong>.
-                    Excluye 9220 (agencias de noticias). 2023 sin datos de
-                    empresas en la fuente.
+                    <strong>Gráfico superior:</strong> tendencia
+                    desestacionalizada (SEATS/X-13), elimina la estacionalidad
+                    para comparar meses entre sí.
+                    <strong>Gráfico inferior:</strong> variación i.a. mensual
+                    (mismo mes vs. mismo mes del año anterior). Barras
+                    <em style="color:#FF6B6B;">rojas</em> = caída,
+                    <em style="color:#4ECDC4;">verdes</em> = crecimiento.
                 </div>
             </div>
             <div class="chart-source">
-                Fuente: SIPA-OEDE (STEySS), <em>provinciales_serie_empresas3_2</em>.
-                Definición: AFIP-DGIP.
+                Fuente: SIPA – Secretaría de Trabajo, Empleo y Seguridad Social (SerieWeb).
+                Serie original y desestacionalizada. Último dato: junio 2026 (preliminar).
             </div>
         </div>
 
         <div class="chart-box">
-            <h3>Contribuyentes por régimen de tributación (2022-2025)</h3>
-            <div id="chart-contribuyentes" class="chart-container"></div>
-            <div class="highlight-box">
-                <div class="positive">
-                    Las firmas inscriptas bajo el régimen de Convenio
-                    Multilateral crecieron de 1.752 a 2.075 en el período,
-                    elevando su participación en el padrón del 60,6% al 71,2%.
-                </div>
-            </div>
-            <div class="chart-source">Fuente: DGIP La Rioja (IIBB), 2022-2025</div>
-        </div>
-
-    </div>
-
-    <!-- ============ EMPLEO EC + INTENSIDAD (uno al lado del otro) ============ -->
-    <div class="chart-row">
-
-        <div class="chart-box">
-            <h3>Empleo EC y participación en el empleo total provincial (2019-2025)</h3>
-            <div id="chart-empleo-share" class="chart-container-tall"></div>
+            <h3>Empleo por sector — Promedio 2025 y variación interanual</h3>
+            <div id="chart-empleo-sector" class="chart-container-tall"></div>
             <div class="highlight-box" style="margin-top:20px;">
                 <div class="positive">
-                    El empleo EC pasó de <strong>356</strong> puestos (2019)
-                    a <strong>521</strong> (2025), un crecimiento de
-                    <strong>+46,4%</strong>. Su participación en el empleo
-                    formal provincial subió de <strong>1,32%</strong> a
-                    <strong>1,93%</strong>. En 2023 se recuperó el dato
-                    (513 puestos) que antes no estaba disponible.
+                    En 2025, el <strong>75% de los sectores</strong> perdió
+                    empleo. Industria y Servicios explican el
+                    <strong>76% de la caída</strong> (−760 puestos entre
+                    ambos). Construcción es el sector más golpeado:
+                    <strong>−14,8% i.a.</strong>. El Comercio es el único sector grande que
+                    se mantiene (<strong>+0,9%</strong>).
                 </div>
                 <div class="nota">
-                    Entre 2022 y 2024 (último año con datos completos de
-                    empresas), la elasticidad del sector fue de
-                    <strong>1,85</strong>: por cada 1% que crecen las
-                    empresas EC, el empleo crece 1,85%. Es un sector
-                    <strong>intensivo en empleo calificado</strong>.
+                    <strong>Fuente:</strong> STEySS – Observatorio de Empleo y
+                    Dinámica Empresarial, en base a SIPA. Serie
+                    <em>provinciales_serie_empleo_anual_3</em>, cuadro T5
+                    (promedios anuales). Valores en puestos.
+                    <strong>Variación i.a.:</strong> 2025 vs. 2024.
                 </div>
             </div>
             <div class="chart-source">
-                Fuente: SIPA-OEDE (STEySS). Definición: AFIP-DGIP.
-                Promedio anual de trimestres con dato.
-            </div>
-        </div>
-
-        <div class="chart-box">
-            <h3>Intensidad empresarial EC — Empresas EC por 1.000 empresas totales (2024)</h3>
-            <div id="chart-intensidad" class="chart-container-tall"></div>
-            <div class="highlight-box" style="margin-top:20px;">
-                <div class="positive">
-                    La Rioja registra una densidad de <strong>31,3‰</strong>,
-                    por encima de Santa Fe (27,3‰) y Santiago del Estero
-                    (25,6‰). En volumen absoluto es la tercera más baja de las
-                    9 jurisdicciones, pero <strong>en términos relativos al
-                    tamaño de su economía ocupa el 7° lugar</strong>. El
-                    límite del sector no es la orientación productiva, sino
-                    el tamaño total del entramado empresarial provincial.
-                </div>
-                <div class="nota">
-                    Con la nueva definición AFIP-DGIP, La Rioja pasa de
-                    30,1‰ a <strong>31,3‰</strong>. Catamarca sube fuerte
-                    (35,2‰ → 43,2‰) por el peso del proxy 7421 (geología),
-                    y Santa Fe cae (43,0‰ → 27,3‰).
-                </div>
-            </div>
-            <div class="chart-source">
-                Fuente: SIPA-OEDE (STEySS), <em>provinciales_serie_empresas3_2</em>.
-                Definición: AFIP-DGIP. Intensidad = (empresas EC / empresas totales) × 1.000.
+                Fuente: SIPA-OEDE (STEySS), promedio anual 2025.
+                Variación i.a. = 2025 vs. 2024.
             </div>
         </div>
 
     </div>
 
-    <!-- ============ I+D / EXPORTACIONES / CONECTIVIDAD ============ -->
+
     <div class="chart-row-3">
+
+        <div class="info-card">
+            <h3>Conectividad digital (Q1-2026)</h3>
+            <div class="info-item">
+                <span class="key">Accesos fijos totales</span>
+                <span class="value">92.160</span>
+            </div>
+            <div class="info-item">
+                <span class="key">Fibra óptica</span>
+                <span class="value">27.564</span>
+            </div>
+            <div class="info-item">
+                <span class="key">Crecimiento Acum. FO</span>
+                <span class="value">+188,7%</span>
+            </div>
+            <div class="info-item">
+                <span class="key">Cobertura del Servicio</span>
+                <span class="value">24 acc. c/100 hab.</span>
+            </div>
+            <div class="info-item">
+                <span class="key">FO sobre total</span>
+                <span class="value">29,9%</span>
+            </div>
+            <div class="highlight-box" style="margin-top:20px;">
+                <div class="positive">
+                    La fibra óptica casi se triplicó en 4 años.
+                    Esta expansión representa el soporte físico indispensable
+                    para que las empresas tecnológicas puedan operar,
+                    exportar y potenciar el ecosistema digital de la provincia.
+                </div>
+            </div>
+            <div class="chart-source">Fuente: ENACOM, Q1-2026</div>
+        </div>
 
         <div class="info-card">
             <h3>Ciencia y Tecnología — I+D</h3>
@@ -561,107 +644,6 @@
             <div class="chart-source">Fuente: INDEC, 2024</div>
         </div>
 
-        <div class="info-card">
-            <h3>Conectividad digital (Q1-2026)</h3>
-            <div class="info-item">
-                <span class="key">Accesos fijos totales</span>
-                <span class="value">92.160</span>
-            </div>
-            <div class="info-item">
-                <span class="key">Fibra óptica</span>
-                <span class="value">27.564</span>
-            </div>
-            <div class="info-item">
-                <span class="key">Crecimiento Acum. FO</span>
-                <span class="value">+188,7%</span>
-            </div>
-            <div class="info-item">
-                <span class="key">Cobertura del Servicio</span>
-                <span class="value">24 acc. c/100 hab.</span>
-            </div>
-            <div class="info-item">
-                <span class="key">FO sobre total</span>
-                <span class="value">29,9%</span>
-            </div>
-            <div class="highlight-box" style="margin-top:20px;">
-                <div class="positive">
-                    La fibra óptica casi se triplicó en 4 años.
-                    Esta expansión representa el soporte físico indispensable
-                    para que las empresas tecnológicas puedan operar,
-                    exportar y potenciar el ecosistema digital de la provincia.
-                </div>
-            </div>
-            <div class="chart-source">Fuente: ENACOM, Q1-2026</div>
-        </div>
-
-    </div>
-
-    <!-- ============ EMPLEO FORMAL + EMPLEO POR SECTOR ============ -->
-    <div class="chart-row">
-
-        <div class="chart-box">
-            <h3>Empleo privado formal — Evolución y variación interanual (2022-2026)</h3>
-
-            <div id="chart-empleo-tendencia"
-                 style="width:100%; height:210px;"></div>
-
-            <div id="chart-empleo-ia"
-                 style="width:100%; height:170px; margin-top:8px;"></div>
-
-            <div class="highlight-box" style="margin-top:20px;">
-                <div class="alert">
-                    ⚠ Entre 2022 y 2026 el empleo formal privado de La Rioja
-                    tuvo un ciclo marcado: creció hasta el pico de
-                    <strong>mayo 2023 (34.329 puestos)</strong>, cayó con
-                    fuerza durante 2024 (−10,6% i.a.) y entró en una
-                    <strong>meseta</strong> durante 2025–2026. En
-                    <strong>mayo 2026</strong> el stock fue de
-                    <strong>30.305 puestos</strong>, con una variación
-                    interanual de <strong>−1,7%</strong>.
-                </div>
-                <div class="nota">
-                    <strong>Gráfico superior:</strong> tendencia
-                    desestacionalizada (SEATS/X-13), elimina la estacionalidad
-                    para comparar meses entre sí.
-                    <strong>Gráfico inferior:</strong> variación i.a. mensual
-                    (mismo mes vs. mismo mes del año anterior). Barras
-                    <em style="color:#FF6B6B;">rojas</em> = caída,
-                    <em style="color:#4ECDC4;">verdes</em> = crecimiento.
-                </div>
-            </div>
-            <div class="chart-source">
-                Fuente: SIPA – Secretaría de Trabajo, Empleo y Seguridad Social (SerieWeb).
-                Serie original y desestacionalizada. Último dato: junio 2026 (preliminar).
-            </div>
-        </div>
-
-        <div class="chart-box">
-            <h3>Empleo por sector — Promedio 2025 y variación interanual</h3>
-            <div id="chart-empleo-sector" class="chart-container-tall"></div>
-            <div class="highlight-box" style="margin-top:20px;">
-                <div class="alert">
-                    ⚠ En 2025, el <strong>75% de los sectores</strong> perdió
-                    empleo. Industria y Servicios explican el
-                    <strong>76% de la caída</strong> (−760 puestos entre
-                    ambos). Construcción es el sector más golpeado:
-                    <strong>−14,8% i.a.</strong> y <strong>−64% desde
-                    2022</strong>. El Comercio es el único sector grande que
-                    se mantiene (<strong>+0,9%</strong>).
-                </div>
-                <div class="nota">
-                    <strong>Fuente:</strong> STEySS – Observatorio de Empleo y
-                    Dinámica Empresarial, en base a SIPA. Serie
-                    <em>provinciales_serie_empleo_anual_3</em>, cuadro T5
-                    (promedios anuales). Valores en puestos.
-                    <strong>Variación i.a.:</strong> 2025 vs. 2024.
-                </div>
-            </div>
-            <div class="chart-source">
-                Fuente: SIPA-OEDE (STEySS), promedio anual 2025.
-                Variación i.a. = 2025 vs. 2024.
-            </div>
-        </div>
-
     </div>
 
 </div>
@@ -672,9 +654,8 @@
     según disponibilidad de cada fuente
     <br><br>
     <span style="font-size:10px; color:#5A8BA8;">
-    Prima salarial núcleo EC calculada sobre CIIU 7220 (consultores informáticos),
-    7250 (reparación informática) y 7290 (informática n.c.p.). Bajo la definición
-    AFIP-DGIP completa (8 CIIU), la prima es +8,4% en 2025.
+    El núcleo software calculad sobre CIIU 7210 (Serv de consultores en equipo de informática),7220 (consultores en informática y suministros de programas informáticos),
+    7250 (mantenimiento y reparación informática), 7290 (informática n.c.p.), 7300 (I+D ) y 7430 (servicios de Publicidad). Actividades EC completo: nucleo software(7210,7220,7250,7290,7300,7430) + 7421 (Serv de arquitectura e ingieneria) y 7499 (Serv de Empresas n.c.p).
     </span>
 </div>
 
@@ -710,9 +691,7 @@
     });
 
 
-    // ==========================================================
-    // DONUT — estructura por actividad
-    // ==========================================================
+  
     Highcharts.chart("chart-donut", {
 
         chart: { type: "pie" },
@@ -749,9 +728,7 @@
     });
 
 
-    // ==========================================================
-    // INGRESOS REALES
-    // ==========================================================
+
     Highcharts.chart("chart-ingresos", {
 
         chart: { type: "column" },
@@ -862,9 +839,7 @@
     });
 
 
-    // ==========================================================
-    // PRIMA SALARIAL EC — Núcleo software vs. AFIP-DGIP completo
-    // ==========================================================
+
     Highcharts.chart("chart-prima", {
 
         chart: { type: "column" },
@@ -944,9 +919,7 @@
     });
 
 
-    // ==========================================================
-    // EMPRESAS EC — DEFINICIÓN AFIP-DGIP (2019-2025)
-    // ==========================================================
+    
     Highcharts.chart("chart-empresas", {
 
         chart: { type: "column" },
@@ -1015,9 +988,7 @@
     });
 
 
-    // ==========================================================
-    // EMPLEO EC Y PARTICIPACIÓN EN EL EMPLEO TOTAL
-    // ==========================================================
+
     Highcharts.chart("chart-empleo-share", {
 
         chart: { type: "column" },
@@ -1089,9 +1060,7 @@
     });
 
 
-    // ==========================================================
-    // INTENSIDAD EMPRESARIAL EC (‰) — 2024
-    // ==========================================================
+ 
     Highcharts.chart("chart-intensidad", {
 
         chart: { type: "bar" },
@@ -1158,9 +1127,7 @@
     });
 
 
-    // ==========================================================
-    // CONTRIBUYENTES POR RÉGIMEN
-    // ==========================================================
+  
     Highcharts.chart("chart-contribuyentes", {
 
         chart: { type: "column" },
@@ -1205,9 +1172,7 @@
     });
 
 
-    // ==========================================================
-    // EMPLEO FORMAL — Gráfico 1: TENDENCIA (área)
-    // ==========================================================
+  
     Highcharts.chart("chart-empleo-tendencia", {
 
         chart: {
@@ -1280,9 +1245,6 @@
     });
 
 
-    // ==========================================================
-    // EMPLEO FORMAL — Gráfico 2: VARIACIÓN i.a. (barras)
-    // ==========================================================
     Highcharts.chart("chart-empleo-ia", {
 
         chart: {
@@ -1353,10 +1315,7 @@
     });
 
 
-    // ==========================================================
-    // EMPLEO POR SECTOR — Promedio 2025 + variación i.a.
-    // Fuente: SIPA-OEDE, T5 (provinciales_serie_empleo_anual_3)
-    // ==========================================================
+
     Highcharts.chart("chart-empleo-sector", {
 
         chart: {
@@ -1451,9 +1410,6 @@
     });
 
 
-    // ==========================================================
-    // TRANSFORMACIÓN — consultores vs publicidad
-    // ==========================================================
     Highcharts.chart("chart-transform", {
 
         chart: { type: "bar", height: 160 },
